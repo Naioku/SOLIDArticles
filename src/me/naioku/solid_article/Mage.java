@@ -9,4 +9,8 @@ public class Mage {
     public void castSpell(Slow slow) {
         slow.cast();
     }
+
+    public void castSpell(DragonShout dragonShout) {
+        dragonShout.cast();
+    }
 }

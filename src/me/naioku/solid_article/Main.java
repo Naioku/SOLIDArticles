@@ -6,5 +6,6 @@ public class Main {
 
         mage.castSpell(new Fireball());
         mage.castSpell(new Slow());
+        mage.castSpell(new DragonShout());
     }
 }
