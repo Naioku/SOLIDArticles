@@ -1,8 +1,5 @@
 package me.naioku.solid_article;
 
-import me.naioku.solid_article.skill_classes.mage.DragonShout;
-import me.naioku.solid_article.skill_classes.mage.Slow;
-
 public class Main {
     public static void main(String[] args) {
         Player player = new Player();
@@ -17,11 +14,12 @@ public class Main {
 
         player.castActiveSpell();
 
-        player.setActiveSpell(new Slow());
+        player.setActiveSpell("Slow");
         player.castActiveSpell();
 
-        player.setActiveSpell(new DragonShout());
+        player.setActiveSpell("DragonShout");
         player.castActiveSpell();
 
+        player.setActiveSpell("Kluski");
     }
 }

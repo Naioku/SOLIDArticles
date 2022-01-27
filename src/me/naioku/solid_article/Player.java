@@ -2,7 +2,7 @@ package me.naioku.solid_article;
 
 import me.naioku.solid_article.leveling_system.LevelingService;
 import me.naioku.solid_article.skill_classes.mage.Mage;
-import me.naioku.solid_article.skill_classes.mage.Spell;
+
 
 public class Player {
 
@@ -20,7 +20,7 @@ public class Player {
     /* END OF PLAYER STATS */
 
     /* MAGE */
-    public void setActiveSpell(Spell activeSpell) {
+    public void setActiveSpell(String activeSpell) {
         mage.setActiveSpell(activeSpell);
     }
 
