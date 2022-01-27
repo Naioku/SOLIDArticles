@@ -1,6 +1,6 @@
 package me.naioku.solid_article;
 
-public class Heal implements Spell {
+public class Heal implements CastSpells, UseOnYourselfSpells {
 
     @Override
     public void cast() {

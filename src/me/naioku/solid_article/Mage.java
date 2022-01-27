@@ -2,11 +2,11 @@ package me.naioku.solid_article;
 
 public class Mage {
 
-    public void castSpell(Spell spell) {
+    public void castSpell(CastSpells spell) {
         spell.cast();
     }
 
-    public void useSpellOnYourself(Spell spell) throws NoSuchMethodException {
+    public void useSpellOnYourself(UseOnYourselfSpells spell) {
         spell.useOnYourself();
     }
 }
