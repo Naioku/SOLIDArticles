@@ -1,50 +1,31 @@
 package me.naioku.solid_article;
 
+import me.naioku.solid_article.leveling_system.LevelingService;
+import me.naioku.solid_article.skill_classes.mage.Mage;
+import me.naioku.solid_article.skill_classes.mage.Spell;
+
 public class Player {
 
-    private int level = 0;
-    private long experience = 0;
-    private long nextLevelThreshold = 500;
-
-    private Spell activeSpell = new Fireball();
+    LevelingService levelingService = new LevelingService();
+    Mage mage = new Mage();
 
     /* PLAYER STATS */
     public void showPlayerStats() {
-        System.out.println("=== PLAYER STATISTICS ===");
-        System.out.println("  -> Level: " + level);
-        System.out.println("  -> Experience: " + experience);
-        System.out.println("  -> Next level threshold: " + nextLevelThreshold);
-        System.out.println();
+        levelingService.showPlayerStats();
     }
 
     public void addExperience(int experience) {
-        this.experience += experience;
-        while (isNextLevel()) {
-            levelUp();
-            calculateNewThreshold();
-        }
-    }
-
-    private void calculateNewThreshold() {
-        nextLevelThreshold = Math.round(nextLevelThreshold * 1.5);
-    }
-
-    private boolean isNextLevel() {
-        return experience >= nextLevelThreshold;
-    }
-
-    private void levelUp() {
-        level++;
+        levelingService.addExperience(experience);
     }
     /* END OF PLAYER STATS */
 
     /* MAGE */
     public void setActiveSpell(Spell activeSpell) {
-        this.activeSpell = activeSpell;
+        mage.setActiveSpell(activeSpell);
     }
 
     public void castActiveSpell() {
-        activeSpell.cast();
+        mage.castActiveSpell();
     }
     /* END OF MAGIC */
 }
