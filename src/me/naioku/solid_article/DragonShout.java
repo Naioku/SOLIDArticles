@@ -4,6 +4,11 @@ public class DragonShout implements Spell {
 
     @Override
     public void cast() {
-        System.out.println("FUS RO DAH!");
+        System.out.println("Cast: FUS RO DAH!");
+    }
+
+    @Override
+    public void useOnYourself() {
+        System.out.println("Use on yourself: FUS RO DAH!");
     }
 }
