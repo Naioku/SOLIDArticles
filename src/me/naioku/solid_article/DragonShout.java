@@ -8,7 +8,7 @@ public class DragonShout implements Spell {
     }
 
     @Override
-    public void useOnYourself() {
-        System.out.println("Use on yourself: FUS RO DAH!");
+    public void useOnYourself() throws NoSuchMethodException {
+        throw new NoSuchMethodException();
     }
 }

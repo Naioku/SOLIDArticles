@@ -6,7 +6,7 @@ public class Mage {
         spell.cast();
     }
 
-    public void useSpellOnYourself(Spell spell) {
+    public void useSpellOnYourself(Spell spell) throws NoSuchMethodException {
         spell.useOnYourself();
     }
 }

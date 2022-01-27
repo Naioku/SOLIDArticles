@@ -8,6 +8,13 @@ public class Main {
         mage.castSpell(new Slow());
         mage.castSpell(new DragonShout());
         mage.castSpell(new Heal());
-        mage.useSpellOnYourself(new Heal());
+
+        try {
+            mage.useSpellOnYourself(new Heal());
+        } catch (NoSuchMethodException e) {
+            System.out.println("No such method implemented!");
+        }
+
+        //mage.useSpellOnYourself(new DragonShout());
     }
 }

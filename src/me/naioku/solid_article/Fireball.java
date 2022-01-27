@@ -8,7 +8,7 @@ public class Fireball implements Spell {
     }
 
     @Override
-    public void useOnYourself() {
-        System.out.println("Use on yourself: FIREBALL!");
+    public void useOnYourself() throws NoSuchMethodException {
+        throw new NoSuchMethodException();
     }
 }
